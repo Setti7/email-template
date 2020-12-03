@@ -1,0 +1,65 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-text align="center" color="#555" />
+      <mj-section background-color="#fff" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#EEEEEE">
+    <mj-section background-color="#EEEEEE">
+      <mj-column>
+        <mj-image src="http://imagens.savegnagoonline.com.br/Logo_savegnago.png" href="https://www.savegnago.com.br/" alt="Logo Savegnago" padding="0px 0px 16px 0px" width="150px"></mj-image>
+        <mj-image href="https://www.savegnago.com.br/" src="http://imagens.savegnagoonline.com.br/Header_QB_03.dez.png" alt="Quinta barato" padding="0px 0px 0px 0px"></mj-image>
+      </mj-column>
+    </mj-section>
+
+    {% for item1, item2 in items %}
+    <mj-section background-color="#EEEEEE">
+      <mj-column>
+        <mj-image src="{{ item1['img_src'] }}" alt="{{ item1['name'] }}" padding="0px 0px 0px 0px" width="250px" border-radius="10px"></mj-image>
+        <mj-text font-family="Lora, sans serif" font-size="22px" color="#0C0D2C" font-weight="700" padding="5px 0px 0px 0px">{{ item1['name'] }}</mj-text>
+        <mj-text font-family="Lora, sans serif" font-size="18px" color="#0C0D2C" font-weight="400" padding="10px 0px 0px 0px">{{ item1['description'] }}</mj-text>
+        {% if 'img_href' in item1 %} <mj-button href="{{ item1['img_href'] }}" font-family="Lora, sans serif" font-size="12px" background-color="#0C0D2C" border-radius="50px" padding="16px 0px 0px 0px" width="140px"> Comprar agora </mj-button> {% endif %}
+      </mj-column>
+
+    {% if item2 is not none %}
+      <mj-column>
+        <mj-image src="{{ item2['img_src'] }}" alt="{{ item2['name'] }}" padding="0px 0px 0px 0px" width="250px" border-radius="10px"></mj-image>
+        <mj-text font-family="Lora, sans serif" font-size="22px" color="#0C0D2C" font-weight="700" padding="5px 0px 0px 0px">{{ item2['name'] }}</mj-text>
+        <mj-text font-family="Lora, sans serif" font-size="18px" color="#0C0D2C" font-weight="400" padding="10px 0px 0px 0px">{{ item2['description'] }}</mj-text>
+        {% if 'img_href' in item2 %} <mj-button href="{{ item2['img_href'] }}" font-family="Lora, sans serif" font-size="12px" background-color="#0C0D2C" border-radius="50px" padding="16px 0px 0px 0px" width="140px"> Comprar agora </mj-button> {% endif %}
+      </mj-column>
+    {% endif %}
+
+    </mj-section>
+   {% endfor %}
+
+    <mj-section background-color="#EEEEEE" padding="0px 0px 0px 0px">
+      <mj-column padding="0px 0px 0px 0px">
+        <mj-image href="https://www.savegnago.com.br/finaldeano" src="http://imagens.savegnagoonline.com.br/promoção_footer.png" alt="Promoção de fim de ano" padding="0px 0px 0px 0px"></mj-image>
+        <mj-image href="https://www.savegnago.com.br/institucional/jornal-de-ofertas" src="http://imagens.savegnagoonline.com.br/footer-banner-jornal-natal.jpg" alt="Jornal de ofertas" padding="0px 0px 0px 0px"></mj-image>
+        <mj-image href="https://cadastro.savegnago.com.br/v1/apps/cadastroPrimeiraFase" src="http://imagens.savegnagoonline.com.br/Footer-saveganhe.png" alt="Save ganhe" padding="0px 0px 0px 0px"></mj-image>
+        <mj-divider border-width="3px" border-style="solid" border-color="#FF0A13" padding="0px 0px 0px 0px" />
+    </mj-section>
+    <mj-section background-color="#0C0D2C" padding="8px 0px 0px 0px">
+      <mj-column>
+        <mj-image href="https://www.savegnago.com.br/" src="http://imagens.savegnagoonline.com.br/internet.png" width="30px" alt="Logo Savegnago" padding="8px 0px 0px 0px" align="right"></mj-image>
+      </mj-column>
+      <mj-column>
+        <mj-image href="https://www.instagram.com/savegnagosupermercados/" src="http://imagens.savegnagoonline.com.br/instagram.png" width="30px" alt="Logo Savegnago" padding="8px 0px 0px 0px" align="center"></mj-image>
+      </mj-column>
+      <mj-column>
+        <mj-image href="https://www.facebook.com/savegnago.supermercados/" src="http://imagens.savegnagoonline.com.br/facebook.png" width="30px" alt="Logo Savegnago" padding="8px 0px 16px 0px" align="left"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#EEEEEE" padding="8px 0px 0px 0px">
+      <mj-column>
+        <mj-text font-family="Lora, sans serif" font-size="12px" color="#3E3E3E" font-weight="300" padding="5px 0px 0px 0px">Imagens meramente ilustrativas. Ofertas válidas até 03/12/2020, exceto ARARAQUARA, MATÃO, SÃO CARLOS, RIO CLARO, PIRACICABA, SUMARÉ, LIMEIRA, ARARAS E CAMPINAS ou até acabarem os estoques.</mj-text>
+        <mj-text font-family="Lora, sans serif" font-size="12px" color="#3E3E3E" font-weight="300" padding="5px 0px 0px 0px">Todas as regras e promoções são válidas apenas para produtos vendidos e entregues pelo Savegnago.</mj-text>
+        <mj-text font-family="Lora, sans serif" font-size="12px" color="#3E3E3E" font-weight="300" padding="5px 0px 0px 0px">Para prestarmos melhor atendimento, nos reservamos o direito de limitar, por cliente, a quantidade dos produtos anunciados. Fica ressalvada eventual retificação das ofertas veiculadas.</mj-text>
+        <mj-text font-family="Lora, sans serif" font-size="12px" color="#3E3E3E" font-weight="300" padding="5px 0px 0px 0px">É proibida a venda de bebidas alcoólicas para menores de 18 anos de idade.</mj-text>
+        <mj-text font-family="Lora, sans serif" font-size="12px" color="#3E3E3E" font-weight="300" padding="16px 0px 16px 0px">Respeitamos sua privacidade. Caso queira deixar de receber nossos emails, <a href="##optout##">descadastre-se aqui</a>.</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
